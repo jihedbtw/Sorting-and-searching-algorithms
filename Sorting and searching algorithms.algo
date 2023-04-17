@@ -1,0 +1,17 @@
+ALGORITHM insertion sorting algorithm
+
+PROCEDURE insertion(list)
+VAR
+    n : INTEGER := list.length;
+    i, j, v : INTEGER;
+BEGIN
+    FOR i FROM 1 TO n-1 DO
+        j := i-1
+        WHILE (j > 0 AND list[j] > list[j+1]) DO
+            v := list[j+1]
+            list[j+1] := list[j]
+            list[j] := v
+            j := j - 1
+        END_WHILE
+    END_FOR
+END
